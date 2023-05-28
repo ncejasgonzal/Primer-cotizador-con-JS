@@ -11,40 +11,67 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="text-center">La Antigua Seguros</h1>
-        <form>
-            <div class="form-group">
-                <label for="marca">Selecciona una marca de auto:</label>
-                <select id="marca" class="form-control">
-                    <option value="marca1">FIAT</option>
-                    <option value="marca2">VOLKSWAGEN</option>
-                    <option value="marca3">RENAULT</option>
-                    <!-- Agrega más marcas de autos aquí -->
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="modelo">Selecciona un modelo de auto:</label>
-                <select id="modelo" class="form-control">
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                </select>
-            </div>
-            <button onclick="calcularCotizacion(event)" class="btn btn-primary">Calcular Cotización</button>
-        </form>
+    <header>
 
-        <div id="resultado" class="text-center font-weight-bold mt-3"></div>
-    </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="text-center">La Antigua Seguros</h1>
+            <form>
+                <div class="form-group">
+                    <label for="marca">Selecciona una marca de auto:</label>
+                    <select id="marca" class="form-control">
+                        <option value="marca1">FIAT</option>
+                        <option value="marca2">VOLKSWAGEN</option>
+                        <option value="marca3">RENAULT</option>
+                        <option value="marca4">TOYOTA</option>
+                        <option value="marca5">AUDI</option>
+                        <option value="marca6">BMW</option>
+                        <!-- Agrega más marcas de autos aquí -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modelo">Selecciona un modelo de auto:</label>
+                    <select id="modelo" class="form-control">
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de Modelo:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="SUV">SUV</option>
+                        <option value="CAMIONETA">Camioneta</option>
+                        <option value="AUTO">Auto</option>
+                        <!-- Agrega más opciones de tipo de modelos según sea necesario -->
+                    </select>
+                </div>
 
+                <div class="form-group">
+                    <label for="uso">Uso:</label>
+                    <select id="uso" name="uso">
+                        <option value="PARTICULAR">Particular</option>
+                        <option value="REMIS">Remis</option>
+                        <!-- Agrega más opciones de uso según sea necesario -->
+                    </select>
+                </div>
+                <button onclick="calcularCotizacion(event)" class="btn btn-primary">Calcular Cotización</button>
+            </form>
+            <div id="resultado" class="text-center font-weight-bold mt-3"></div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 La Antigua Seguros. Todos los derechos reservados.</p>
+    </footer>
     <script src="./JS/app.js"></script>
 </body>
 

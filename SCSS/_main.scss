@@ -1,0 +1,61 @@
+main {
+    background-color: $secondary-color;
+
+    .container {
+        max-width: $container-max-width;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: $border-radius;
+
+        h2 {
+            font-size: $heading-font-size;
+            color: $primary-color;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+
+            label {
+                font-weight: bolder;
+            }
+
+            select {
+                width: 100%;
+                padding: 0px;
+                border-radius: $border-radius;
+                border: 1px solid $secondary-color;
+            }
+        }
+
+        .button-cotizar {
+            @include button-styles;
+            margin-top: 20px;
+        }
+
+        .result-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            padding: 20px;
+            border-radius: $border-radius;
+            background-color: $primary-color;
+            color: white;
+            text-align: center;
+            width: 80%;      
+
+            h3 {
+                font-size: $heading-font-size;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

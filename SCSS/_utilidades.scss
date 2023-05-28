@@ -1,0 +1,29 @@
+@mixin center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-styles {
+    padding: $button-padding;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px $primary-color;
+    }
+}
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

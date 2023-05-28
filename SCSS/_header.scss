@@ -1,0 +1,10 @@
+header {
+    background-color: $primary-color;
+    height: $header-height;
+    padding: 20px;
+
+    h1 {
+        font-size: $heading-font-size;
+        color: white;
+    }
+}
