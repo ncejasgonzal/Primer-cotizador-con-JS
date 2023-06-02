@@ -6,107 +6,106 @@ function calcularCotizacion(event) {
     let usoAuto = document.getElementById("uso").value;
 
 
-    // Realiza los cálculos de cotización según la marca y el modelo de auto seleccionados
+    // La cotización comienza en 0 e irá incrementando segun lo seleccionado por el usuario
     let cotizacion = 0;
 
     switch (marcaAuto) {
         case "marca1":
-            // Lógica de cotización para la marca 1
-            cotizacion += 45000; // Cantidad base para la marca 1
+            // Cotización para la marca FIAT
+            cotizacion += 45000;
             break;
         case "marca2":
-            // Lógica de cotización para la marca 2
-            cotizacion += 55000; // Cantidad base para la marca 2
+            // Cotización para la marca VOLKSWAGEN
+            cotizacion += 55000;
             break;
         case "marca3":
-            // Lógica de cotización para la marca 3
-            cotizacion += 60000; // Cantidad base para la marca 3
+            // Cotización para la marca RENAULT
+            cotizacion += 60000;
             break;
         case "marca4":
-            // Lógica de cotización para la marca 3
-            cotizacion += 65000; // Cantidad base para la marca 3
+            // Cotización para la marca TOYOTA
+            cotizacion += 65000; 
             break;
         case "marca5":
-            // Lógica de cotización para la marca 3
-            cotizacion += 70000; // Cantidad base para la marca 3
+            // Cotización para la marca AUDI
+            cotizacion += 70000;
+            break;
+        case "marca6":
+            // Cotización para la marca BMW
+            cotizacion += 75000;
             break;
     }
 
-    // Lógica adicional según el modelo de auto seleccionado
+    // Varia el precio segun el año del auto
     switch (modeloAuto) {
         case "2013":
-            cotizacion += 1000; // Cantidad adicional para el modelo 2013
+            cotizacion += 1000;
             break;
         case "2014":
-            cotizacion += 1500; // Cantidad adicional para el modelo 2014
+            cotizacion += 1500;
             break;
         case "2015":
-            cotizacion += 2000; // Cantidad adicional para el modelo 2015
+            cotizacion += 2000;
             break;
         case "2016":
-            cotizacion += 2500; // Cantidad adicional para el modelo 2015
+            cotizacion += 2500;
             break;
         case "2017":
-            cotizacion += 3000; // Cantidad adicional para el modelo 2015
+            cotizacion += 3000;
             break;
         case "2018":
-            cotizacion += 3500; // Cantidad adicional para el modelo 2015
+            cotizacion += 3500; 
             break;
         case "2019":
-            cotizacion += 4000; // Cantidad adicional para el modelo 2015
+            cotizacion += 4000; 
             break;
         case "2020":
-            cotizacion += 4500; // Cantidad adicional para el modelo 2015
+            cotizacion += 4500; 
             break;
         case "2021":
-            cotizacion += 5000; // Cantidad adicional para el modelo 2015
+            cotizacion += 5000; 
             break;
         case "2022":
-            cotizacion += 5500; // Cantidad adicional para el modelo 2015
+            cotizacion += 5500; 
             break;
         case "2023":
-            cotizacion += 6000; // Cantidad adicional para el modelo 2015
+            cotizacion += 6000; 
             break;
 
     }
 
-    // Lógica adicional según el tipo de auto seleccionado
+    // Variación de precio según tipo de vehiculo
     switch (tipoAuto) {
         case "SUV":
-            cotizacion += 300; // Cantidad adicional para los SUV
+            cotizacion += 7000; // Cantidad adicional para los SUV
             break;
         case "CAMIONETA":
-            cotizacion += 250; // Cantidad adicional para las camionetas
+            cotizacion += 9250; // Cantidad adicional para las camionetas
             break;
-        // Agrega más casos para otros tipos de autos y sus cotizaciones adicionales
     }
 
-    // Lógica adicional según el uso del auto seleccionado
+    // Incremento de precio si es de uso REMIS
     switch (usoAuto) {
         case "PARTICULAR":
-            cotizacion *= 1.1; // Aumento del 10% para uso particular
+            cotizacion *= 1.0;
             break;
         case "REMIS":
             cotizacion *= 1.8; // Aumento del 80% para uso remis
             break;
-        // Agrega más casos para otros usos de autos y sus cotizaciones adicionales
     }
 
     // Aplicar un descuento si el modelo es anterior a 2017
     if (modeloAuto <= "2017") {
         cotizacion -= 5000;
     }
+// Mostrar el resultado en un cuadro superpuesto
+const resultadoDiv = document.getElementById("resultado");
+resultadoDiv.textContent = "La cotización para la marca, modelo, tipo y uso seleccionados es: $" +
+    cotizacion.toFixed(2) +
+    " por mes";
+resultadoDiv.classList.add("resultado-visible");
 
-    // Calcular cotización para los próximos 5 años
-    for (var i = 0; i < 5; i++) {
-        cotizacion += 50;
-    }
 
-    // Muestra el resultado de la cotización en un cuadro de diálogo emergente (alert)
-    let resultadoMessage =
-        "La cotización para la marca, modelo, tipo y uso seleccionados es: $" +
-        cotizacion.toFixed(2) +
-        " por mes";
-    alert(resultadoMessage);
 }
+
 

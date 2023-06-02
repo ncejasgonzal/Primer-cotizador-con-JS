@@ -2,4 +2,8 @@ footer {
     background-color: $secondary-color;
     color: white;
     padding: 20px;
+    .parrafoFooter{
+        justify-content: center;
+        text-align: center;
+    }
 }
